@@ -24,6 +24,7 @@
     "react-leaflet": "^2.7.0"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "prettier": "2.0.5"
   },
   "keywords": [
@@ -32,7 +33,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "env-cmd -f .env.development gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
