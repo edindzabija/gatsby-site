@@ -5,6 +5,8 @@ date: "2020-23-08"
 
 Learning Gatsby even more
 
+![Mountians](./mountains.jpg)
+
 ## Topcis Covered
 
 1. Gatsby
