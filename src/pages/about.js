@@ -9,8 +9,7 @@ const About = () => {
       <Layout>
         <Head title="About" />
         <h2>About Page</h2>
-
-        <p>something something bla bla bla</p>
+        <p>Work in progress....</p>
       </Layout>
     </div>
   )

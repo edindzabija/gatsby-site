@@ -10,8 +10,7 @@ const IndexPage = () => (
       <Head title="Home" />
       <h1>This is a Gatsby Page</h1>
       <p>
-        The content will be here, meanwhile feel free to contact me{" "}
-        <Link to="/about">here</Link>
+        The content will be here soon...
       </p>
     </Layout>
   </div>
