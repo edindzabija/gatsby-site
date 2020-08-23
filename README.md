@@ -3,8 +3,8 @@
 ### Work In Progress
 
 ## TODO:
-### [x] Header/Navigation
-### [x] Display posts list
-### [x] Create new post pages, display posts
-### [ ] CMS
+### [X] Header/Navigation
+### [X] Display posts list
+### [X] Create new post pages, display posts
+### [X] CMS
 ### [ ] Styles
