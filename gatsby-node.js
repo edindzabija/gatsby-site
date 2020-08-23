@@ -10,7 +10,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
           node {
             title
             slug
-            publishedDate(formatString: "Do MMMM, YYYY")
+            publishedDate(formatString: "DD MMMM, YYYY")
           }
         }
       }
