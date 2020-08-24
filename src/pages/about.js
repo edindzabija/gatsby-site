@@ -8,7 +8,7 @@ const About = () => {
     <div>
       <Layout>
         <Head title="About" />
-        <h2>About Page</h2>
+        <h1>About Page</h1>
         <p>Work in progress....</p>
       </Layout>
     </div>

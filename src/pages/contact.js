@@ -8,7 +8,7 @@ const Contact = () => {
     <div>
       <Layout>
         <Head title="Contact" />
-        <h2>Contact Page</h2>
+        <h1>Contact Page</h1>
         <p>Work in progress...</p>
       </Layout>
     </div>

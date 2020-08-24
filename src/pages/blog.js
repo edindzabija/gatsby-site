@@ -14,6 +14,11 @@ const BlogPage = () => {
             title
             slug
             publishedDate(formatString: "DD MMMM, YYYY")
+            # thumbnail {
+            #   resize {
+            #     src
+            #   }
+            # }
           }
         }
       }
@@ -30,6 +35,10 @@ const BlogPage = () => {
             return (
               <li className={blogStyles.post}>
                 <Link to={`/blog/${post.node.slug}`}>
+                  {/* <img
+                    alt={post.node.title}
+                    src={post.node.thumbnail.resize.src}
+                  /> */}
                   <h2>{post.node.title}</h2>
                   <p>{post.node.publishedDate}</p>
                 </Link>
