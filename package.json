@@ -27,7 +27,8 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "tailwindcss": "^1.7.3"
   },
   "keywords": [
     "gatsby"
