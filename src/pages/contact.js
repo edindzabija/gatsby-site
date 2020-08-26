@@ -8,8 +8,6 @@ const Contact = () => {
     <div>
       <Layout>
         <Head title="Contact" />
-        <h1>Contact Page</h1>
-        <p>Work in progress...</p>
       </Layout>
     </div>
   )
