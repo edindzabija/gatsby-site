@@ -23,39 +23,40 @@ const IndexPage = () => {
       }
     }
   `)
+  const btnFunc = () => {
+    alert('Work in Progress')
+  }
   return (
     <div>
       <Layout>
-        <Head title="Blog" />
+        <Head title="Home" />
         <main className="mt-12">
           <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6 mb-16">
             {/* <!-- main post --> */}
-            <div className="mb-4 lg:mb-0  p-4 lg:p-0 w-full md:w-4/7 relative block">
+            <div className="mb-4 lg:mb-0 p-4 lg:p-2 w-full md:w-4/7 relative block">
               <img
-                src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+                src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png"
                 className="-md object-cover w-full h-64"
               />
               <span className="text-green-700 text-sm hidden md:block mt-4">
                 {" "}
-                Technology{" "}
+                React {" - "}
+                Gatsby {" - "}
+                GraphQL {" - "}
+                CMS{" "}
               </span>
               <h1 className="text-gray-800 text-4xl font-bold mt-2 mb-2 leading-tight">
-                Ignorant branched humanity led now marianne too.
+                How to make your personal blog with React and Gatsby.js [Part 1]
               </h1>
               <p className="text-gray-600 mb-4">
-                Necessary ye contented newspaper zealously breakfast he
-                prevailed. Melancholy middletons yet understood decisively boy
-                law she. Answer him easily are its barton little. Oh no though
-                mother be things simple itself. Oh be me, sure wise sons, no.
-                Piqued ye of am spirit regret. Stimulated discretion impossible
-                admiration in particular conviction up.
+                In this series of posts we will go trough the whole process of
+                creating a personal blog with React and Gatsby.js You will learn
+                everything from setting up the project to deploying it on the
+                web...
               </p>
-              <a
-                href="./blog.html"
-                className="inline-block px-6 py-3 mt-2 -md bg-green-700 text-gray-100"
-              >
-                Read more
-              </a>
+              <button onClick={btnFunc} className="focus:outline-none inline-block px-6 py-3 mt-2 -md bg-green-700 text-gray-100">
+                Read More
+              </button>
             </div>
 
             {/* <!-- sub-main posts --> */}
@@ -63,23 +64,21 @@ const IndexPage = () => {
               {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
                 return (
                   <Link to={`/blog/${post.node.slug}`}>
-                    <div className="w-full flex flex-col md:flex-row mb-10">
+                    <div className="flex shadow-sm mx-6 mx-auto mb-30 mb-2 p-2 max-w-lg md:max-w-2xl h-40">
                       <img
+                        className="h-full w-1/3 object-cover pb-5/6"
                         src={post.node.thumbnail.resize.src}
                         alt={post.node.slug}
-                        className="block md:hidden lg:block h-68 w-1/2 md:h-32 m-4 md:m-0"
                       />
-                      <div className="bg-white  px-4">
-                        <span className="text-green-700 text-sm hidden md:block">
-                          {" "}
-                          {post.node.publishedDate}{" "}
-                        </span>
-                        <div className="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-                          {post.node.title}
+                      <div className="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
+                        <div className="flex items-center">
+                          <h3 className="text-xl text-gray-800 font-medium mr-auto">
+                            {post.node.title.length > 50
+                              ? post.node.title.slice(0, 50) + "..."
+                              : post.node.title}
+                          </h3>
                         </div>
-                        <p className="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-                          {post.node.publishedDate}
-                        </p>
+                        <div className="flex items-center justify-end mt-4 top-auto"></div>
                       </div>
                     </div>
                   </Link>
