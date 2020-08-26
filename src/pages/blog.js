@@ -34,7 +34,7 @@ const BlogPage = () => {
             <h2 className="font-bold text-3xl">Latest posts</h2>
           </div>
           <div className="block space-x-0 lg:flex lg:space-x-6">
-            <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0 h-64">
+            <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0 ">
               <img
                 src="https://i.insider.com/5ee51f87f0f4193d9874306a?width=1100&format=jpeg&auto=webp"
                 className=""
@@ -61,7 +61,7 @@ const BlogPage = () => {
               </div>
             </div>
 
-            <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0 h-64">
+            <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
               <img
                 src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png"
                 className=""
