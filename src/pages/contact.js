@@ -34,6 +34,7 @@ const Contact = () => {
   return (
     <Layout>
       <Head title="Contact" />
+
       <h1 className="mt-12 mb-6 font-bold text-3xl text-center">Contact</h1>
       <div className="flex flex-wrap mx-3 mb-6 justify-center">
         <form
@@ -67,6 +68,7 @@ const Contact = () => {
                   placeholder="Your Name"
                   type="text"
                   name="name"
+                  required
                   onChange={handleChange}
                 />
               </label>
@@ -84,6 +86,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 id="email"
+                required
                 placeholder="Your Email"
                 onChange={handleChange}
               />
@@ -101,10 +104,12 @@ const Contact = () => {
                 className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
                 name="message"
                 id="message"
+                required
                 onChange={handleChange}
               />
               <p className="text-gray-600 text-xs italic">
-                Send us your message and we'll get back to you as soon as possible.
+                Send us a message and we'll get back to you as soon as
+                possible.
               </p>
             </div>
           </div>
