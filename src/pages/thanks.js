@@ -7,7 +7,7 @@ const Thanks = () => {
   return (
     <Layout>
       <Head title="404" />
-      <div className="mt-12 text-center">
+      <main className="mt-12 text-center">
         <div>
           <h2 className="text-2xl">Message sent, you'll hear from us soon!</h2>
           <Link to="/">
@@ -217,7 +217,7 @@ const Thanks = () => {
             />
           </svg>
         </div>
-      </div>
+      </main>
     </Layout>
   )
 }

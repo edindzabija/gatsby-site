@@ -30,10 +30,10 @@ const IndexPage = () => {
     <div>
       <Layout>
         <Head title="Home" />
-        <main className="mt-12">
+        <main className="mt-2">
           <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6 mb-16">
             {/* <!-- main post --> */}
-            <div className="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-4/7 relative block">
+            <div className="mb-4 lg:mb-0 p-4 lg:p-2 w-full md:w-4/7 relative block">
               <img
                 src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png"
                 className="-md object-cover w-full h-64"
@@ -56,7 +56,7 @@ const IndexPage = () => {
               </p>
               <button
                 onClick={btnFunc}
-                className="focus:outline-none inline-block px-6 py-3 mt-2 -md bg-green-700 text-gray-100"
+                className="focus:outline-none inline-block px-6 py-3 mt-2 -md bg-green-700 text-gray-100 "
               >
                 Read More
               </button>
@@ -67,13 +67,14 @@ const IndexPage = () => {
               {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
                 return (
                   <Link to={`/blog/${post.node.slug}`}>
-                    <div className="flex shadow-sm mx-6 mx-auto mb-30 mb-2  max-w-lg md:max-w-2xl h-40">
+                    <div className="p-2 lg:p-0 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
                       <img
                         className="h-full w-1/3 object-cover pb-5/6"
                         src={post.node.thumbnail.resize.src}
                         alt={post.node.slug}
                       />
-                      <div className="w-full md:w-2/3 px-4 py-4 bg-white">
+                      <div className="w-full md:w-2/3 px-4 pb-4 bg-white">
+                        <div className="rounded bg-red-100 mb-1">Category</div>
                         <div className="flex items-center">
                           <h3 className="text-xl text-gray-800 font-medium mr-auto">
                             {post.node.title.length > 50

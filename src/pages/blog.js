@@ -28,9 +28,9 @@ const BlogPage = () => {
     <div>
       <Layout>
         <Head title="Blog" />
-        <main className="mt-12">
+        <main className="mt-2">
           {/* recent with dummy text - todo map news*/}
-          <div className="flex mt-16 mb-4 px-4 lg:px-0 justify-center">
+          <div className="flex mb-4 px-4 lg:px-0 justify-center">
             <h2 className="font-bold text-3xl">Latest posts</h2>
           </div>
           <div className="block space-x-0 lg:flex lg:space-x-6">

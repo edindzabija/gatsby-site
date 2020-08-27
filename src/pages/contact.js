@@ -34,96 +34,97 @@ const Contact = () => {
   return (
     <Layout>
       <Head title="Contact" />
-
-      <h1 className="mt-12 mb-6 font-bold text-3xl text-center">Contact</h1>
-      <div className="flex flex-wrap mx-3 mb-6 justify-center">
-        <form
-          className="w-full max-w-lg"
-          name="contact"
-          method="post"
-          action="/thanks/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-        >
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out:{" "}
-              <input name="bot-field" onChange={handleChange} />
-            </label>
-          </p>
-          <div className="w-full mb-6 md:mb-0">
+      <main>
+        <h1 className="mt-2 mb-6 text-1xl text-center">Send us a message!</h1>
+        <div className="flex flex-wrap mx-3 mb-6 justify-center">
+          <form
+            className="w-full max-w-lg"
+            name="contact"
+            method="post"
+            action="/thanks/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don’t fill this out:{" "}
+                <input name="bot-field" onChange={handleChange} />
+              </label>
+            </p>
+            <div className="w-full mb-6 md:mb-0">
+              <p>
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="first-name"
+                >
+                  Your name:
+                  <br />
+                  <input
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="first-name"
+                    placeholder="Your Name"
+                    type="text"
+                    name="name"
+                    required
+                    onChange={handleChange}
+                  />
+                </label>
+              </p>
+            </div>
             <p>
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="first-name"
+                for="email"
               >
-                Your name:
+                Your email:
                 <br />
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="first-name"
-                  placeholder="Your Name"
-                  type="text"
-                  name="name"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  type="email"
+                  name="email"
+                  id="email"
                   required
+                  placeholder="Your Email"
                   onChange={handleChange}
                 />
               </label>
             </p>
-          </div>
-          <p>
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="email"
-            >
-              Your email:
-              <br />
-              <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                type="email"
-                name="email"
-                id="email"
-                required
-                placeholder="Your Email"
-                onChange={handleChange}
-              />
-            </label>
-          </p>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full px-3">
-              <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-password"
-              >
-                Message
-              </label>
-              <textarea
-                className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
-                name="message"
-                id="message"
-                required
-                onChange={handleChange}
-              />
-              <p className="text-gray-600 text-xs italic">
-                Send us a message and we'll get back to you as soon as
-                possible.
-              </p>
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full px-3">
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-password"
+                >
+                  Message
+                </label>
+                <textarea
+                  className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                  name="message"
+                  id="message"
+                  required
+                  onChange={handleChange}
+                />
+                <p className="text-gray-600 text-xs italic">
+                  Send us a message and we'll get back to you as soon as
+                  possible.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <p>
-            <button
-              className="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-              type="submit"
-            >
-              Send
-            </button>
-          </p>
-        </form>
-      </div>
+            <p className="flex justify-center">
+              <button
+                className="w-screen shadow bg-teal-900 hover:bg-teal-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                type="submit"
+              >
+                Send
+              </button>
+            </p>
+          </form>
+        </div>
+      </main>
     </Layout>
   )
 }
