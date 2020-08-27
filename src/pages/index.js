@@ -24,7 +24,7 @@ const IndexPage = () => {
     }
   `)
   const btnFunc = () => {
-    alert('Work in Progress')
+    alert("Work in Progress")
   }
   return (
     <div>
@@ -54,7 +54,10 @@ const IndexPage = () => {
                 everything from setting up the project to deploying it on the
                 web...
               </p>
-              <button onClick={btnFunc} className="focus:outline-none inline-block px-6 py-3 mt-2 -md bg-green-700 text-gray-100">
+              <button
+                onClick={btnFunc}
+                className="focus:outline-none inline-block px-6 py-3 mt-2 -md bg-green-700 text-gray-100"
+              >
                 Read More
               </button>
             </div>
