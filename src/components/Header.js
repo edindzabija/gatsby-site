@@ -56,7 +56,7 @@ const Header = () => {
         <div
           className={
             isOpen
-              ? "w-full block lg:flex lg:items-center lg:w-auto"
+              ? "transition duration-500 ease-in-out w-full block lg:flex lg:items-center lg:w-auto"
               : "lg:flex hidden"
           }
         >
