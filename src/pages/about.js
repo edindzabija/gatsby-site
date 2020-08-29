@@ -7,8 +7,18 @@ const About = () => {
   return (
     <Layout>
       <Head title="About" />
-      <h1>About Page</h1>
-      <p>Work in progress....</p>
+      <div className="mt-12 m-auto">
+        <h1>About</h1>
+        <p>
+          Page built with:
+          <ul>
+            <li>Gatsby</li>
+            <li>React</li>
+            <li>GraphQL</li>
+            <li>Netlify</li>
+          </ul>
+        </p>
+      </div>
     </Layout>
   )
 }

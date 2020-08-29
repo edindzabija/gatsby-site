@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <Layout>
       <Head title="Contact" />
-      <main>
+      <main className="mt-12">
         <h1 className="mt-2 mb-6 text-1xl text-center">Send us a message!</h1>
         <div className="flex flex-wrap mx-3 mb-6 justify-center">
           <form

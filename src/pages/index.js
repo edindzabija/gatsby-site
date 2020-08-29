@@ -30,7 +30,7 @@ const IndexPage = () => {
     <div>
       <Layout>
         <Head title="Home" />
-        <main className="mt-2">
+        <main className="mt-12">
           <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6 mb-16">
             {/* <!-- main post --> */}
             <div className="mb-4 lg:mb-0 p-4 lg:p-2 w-full md:w-4/7 relative block">
