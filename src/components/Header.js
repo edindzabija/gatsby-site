@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-// import { Link } from "gatsby"
-
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
