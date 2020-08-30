@@ -33,7 +33,7 @@ const IndexPage = () => {
         <main className="mt-12">
           <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6 mb-16">
             {/* <!-- main post --> */}
-            <div className="mb-4 lg:mb-0 p-4 lg:p-2 w-full md:w-4/7 relative block">
+            <div className="mb-4 lg:mb-0 p-4 lg:p-2 lg:pl-0 w-full md:w-4/7 relative block">
               <img
                 src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png"
                 className="-md object-cover w-full h-64"
@@ -67,9 +67,9 @@ const IndexPage = () => {
               {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
                 return (
                   <Link to={`/blog/${post.node.slug}`}>
-                    <div className="p-2 lg:p-0 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
+                    <div className="p-2 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
                       <img
-                        className="h-full w-1/3 object-cover pb-5/6"
+                        className="h-full w-2/5 lg:w-1/3 object-cover pb-5/6"
                         src={post.node.thumbnail.resize.src}
                         alt={post.node.slug}
                       />

@@ -20,7 +20,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-gray-900">
+    <header className="bg-gray-800">
       <nav className="flex items-center justify-between flex-wrap lg:px-0 p-6 max-w-screen-lg mx-auto">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Link to="/">
