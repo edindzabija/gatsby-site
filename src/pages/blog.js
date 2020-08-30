@@ -5,24 +5,25 @@ import Layout from "../components/Layout"
 import Head from "../components/Head"
 
 const BlogPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
-        edges {
-          node {
-            title
-            slug
-            publishedDate(formatString: "DD MMMM, YYYY")
-            thumbnail {
-              resize {
-                src
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+  //       edges {
+  //         node {
+  //           title
+  //           slug
+  //           publishedDate(formatString: "DD MMMM, YYYY")
+  //           thumbnail {
+  //             resize {
+  //               src
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  //query will be needed later
 
   return (
     <div>
@@ -51,13 +52,13 @@ const BlogPage = () => {
                   poor on do walk in half. Roof his head the what.
                 </p>
 
-                <a
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
+                <Link
+                  to={`/blog`}
+                  className="inline-block py-2 text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -76,14 +77,13 @@ const BlogPage = () => {
                   speaking learning my exercise so in. Procured shutters mr it
                   feelings. To or three offer house begin taken am at.
                 </p>
-
-                <a
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
+                <Link
+                  to={`/blog`}
+                  className="inline-block py-2 text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -104,13 +104,13 @@ const BlogPage = () => {
                   diminution can considered sentiments interested discretion.
                 </p>
 
-                <a
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
+                <Link
+                  to={`/blog`}
+                  className="inline-block py-2 text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -132,13 +132,13 @@ const BlogPage = () => {
                   poor on do walk in half. Roof his head the what.
                 </p>
 
-                <a
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
+                <Link
+                  to={`/blog`}
+                  className="inline-block py-2 text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -158,13 +158,13 @@ const BlogPage = () => {
                   feelings. To or three offer house begin taken am at.
                 </p>
 
-                <a
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
+                <Link
+                  to={`/blog`}
+                  className="inline-block py-2 text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -185,13 +185,13 @@ const BlogPage = () => {
                   diminution can considered sentiments interested discretion.
                 </p>
 
-                <a
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
+                <Link
+                  to={`/blog`}
+                  className="inline-block py-2 text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

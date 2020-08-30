@@ -35,7 +35,7 @@ const IndexPage = () => {
             {/* <!-- main post --> */}
             <div className="mb-4 lg:mb-0 p-4 lg:p-2 lg:pl-0 w-full md:w-4/7 relative block">
               <img
-                src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png"
+                src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png" alt="placeholder"
                 className="-md object-cover w-full h-64"
               />
               <span className="text-green-700 text-sm hidden md:block mt-4">
@@ -66,26 +66,30 @@ const IndexPage = () => {
             <div className="w-full md:w-4/7">
               {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
                 return (
-                  <Link to={`/blog/${post.node.slug}`}>
-                    <div className="p-2 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
-                      <img
-                        className="h-full w-2/5 lg:w-1/3 object-cover pb-5/6"
-                        src={post.node.thumbnail.resize.src}
-                        alt={post.node.slug}
-                      />
-                      <div className="w-full md:w-2/3 px-4 pb-4 bg-white">
-                        <div className="rounded bg-red-100 mb-1">Category</div>
-                        <div className="flex items-center">
-                          <h3 className="text-xl text-gray-800 font-medium mr-auto">
-                            {post.node.title.length > 50
-                              ? post.node.title.slice(0, 50) + "..."
-                              : post.node.title}
-                          </h3>
+                  <div key={post.node.slug}>
+                    <Link to={`/blog/${post.node.slug}`}>
+                      <div className="p-2 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
+                        <img
+                          className="h-full w-2/5 lg:w-1/3 object-cover pb-5/6"
+                          src={post.node.thumbnail.resize.src}
+                          alt={post.node.slug}
+                        />
+                        <div className="w-full md:w-2/3 px-4 pb-4 bg-white">
+                          <div className="rounded bg-red-100 mb-1">
+                            Category
+                          </div>
+                          <div className="flex items-center">
+                            <h3 className="text-xl text-gray-800 font-medium mr-auto">
+                              {post.node.title.length > 50
+                                ? post.node.title.slice(0, 50) + "..."
+                                : post.node.title}
+                            </h3>
+                          </div>
+                          <div className="flex items-center justify-end mt-4 top-auto"></div>
                         </div>
-                        <div className="flex items-center justify-end mt-4 top-auto"></div>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  </div>
                 )
               })}
             </div>
@@ -93,9 +97,9 @@ const IndexPage = () => {
           {/* recent with dummy text - todo map news*/}
           <div className="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
             <h2 className="font-bold text-3xl">Latest news</h2>
-            <a className="bg-gray-200 hover:bg-green-200 text-gray-800 px-3 py-1  cursor-pointer">
+            <Link className="bg-gray-200 hover:bg-green-200 text-gray-800 px-3 py-1  cursor-pointer">
               View all
-            </a>
+            </Link>
           </div>
           <div className="block space-x-0 lg:flex lg:space-x-6">
             <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
@@ -115,13 +119,13 @@ const IndexPage = () => {
                   poor on do walk in half. Roof his head the what.
                 </p>
 
-                <a
+                <Link
                   href="#"
                   className="inline-block py-2  text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -141,13 +145,13 @@ const IndexPage = () => {
                   feelings. To or three offer house begin taken am at.
                 </p>
 
-                <a
+                <Link
                   href="#"
                   className="inline-block py-2  text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -168,13 +172,13 @@ const IndexPage = () => {
                   diminution can considered sentiments interested discretion.
                 </p>
 
-                <a
+                <Link
                   href="#"
                   className="inline-block py-2  text-green-900 mt-2 ml-auto"
                 >
                   {" "}
                   Read more{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
