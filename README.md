@@ -1,7 +1,5 @@
 ## Gatsby Blog
 
-### Work In Progress
-
 ## You can see check the live version [here](https://another-gatsby-blog.netlify.app/blog)
 
 ### IMPORTANT
