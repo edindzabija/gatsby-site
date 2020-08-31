@@ -10,6 +10,7 @@ const IndexPage = () => {
       allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
+            postDescription
             title
             slug
             publishedDate(formatString: "DD MMMM, YYYY")
@@ -37,7 +38,7 @@ const IndexPage = () => {
               <img
                 src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png"
                 alt="placeholder"
-                className="-md object-cover w-full h-64"
+                className="-md object-fill w-full h-64"
               />
               <span className="text-sm hidden md:block mt-4">
                 {" "}
@@ -55,12 +56,12 @@ const IndexPage = () => {
                 everything from setting up the project to deploying it on the
                 web...
               </p>
-              <button
-                onClick={btnFunc}
+              <Link
+                to={`/blog/how-to-make-your-personal-blog-with-react-and-gatsby-js-part-1`}
                 className="focus:outline-none inline-block px-6 py-3 mt-2 -md rounded-md bg-green-700 text-gray-100 "
               >
                 Read More
-              </button>
+              </Link>
             </div>
 
             {/* <!-- sub-main posts --> */}
@@ -69,16 +70,14 @@ const IndexPage = () => {
                 return (
                   <div key={post.node.slug}>
                     <Link to={`/blog/${post.node.slug}`}>
-                      <div className="p-2 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
+                      <div className="top-post p-2 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
                         <img
                           className="h-full w-2/5 lg:w-1/3 object-cover pb-5/6"
                           src={post.node.thumbnail.resize.src}
                           alt={post.node.slug}
                         />
                         <div className="w-full md:w-2/3 px-4 pb-4 ">
-                          <div className="rounded mb-1">
-                            Category
-                          </div>
+                          <div className="rounded mb-1">Category</div>
                           <div className="flex items-center">
                             <h3 className="text-xl font-medium mr-auto">
                               {post.node.title.length > 50
@@ -95,10 +94,10 @@ const IndexPage = () => {
               })}
             </div>
           </div>
-          {/* recent with dummy text - todo map news*/}
+          {/* latest posts */}
+
           <div className="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
             <h2 className="font-bold text-3xl">Latest posts</h2>
-            
           </div>
           <div className="block space-x-0 lg:flex lg:space-x-6">
             <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
