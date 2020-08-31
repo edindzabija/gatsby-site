@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import headerStyles from "./header.module.scss"
-
+import DarkModeToggle from "../components/DarkModeToggle"
 const Header = () => {
   // const data = useStaticQuery(graphql`
   //   query {
@@ -20,9 +20,9 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-gray-800">
+    <header className="header ">
       <nav className="flex items-center justify-between flex-wrap lg:px-0 p-6 max-w-screen-lg mx-auto">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <div className="flex items-center flex-shrink-0 mr-6">
           <Link to="/">
             <svg
               className="fill-current h-8 w-8 mr-2"
@@ -39,7 +39,7 @@ const Header = () => {
         <div className="block lg:hidden">
           <button
             onClick={mobileMenuHandler}
-            className="flex items-center px-3 py-2 border rounded text-gray-100 border-white-400 hover:text-white hover:border-white"
+            className="flex items-center px-3 py-2 border rounded "
           >
             <svg
               className="fill-current h-3 w-3"
@@ -59,37 +59,55 @@ const Header = () => {
           }
         >
           <div className="text-sm lg:flex-grow">
-            <Link
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
-              activeClassName={headerStyles.activeNavItem}
-              to="/"
-            >
-              Home
-            </Link>
-            <Link
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
-              activeClassName={headerStyles.activeNavItem}
-              to="/blog"
-            >
-              Blog
-            </Link>
-            <Link
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
-              activeClassName={headerStyles.activeNavItem}
-              to="/about"
-            >
-              About
-            </Link>
-            <Link
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
-              activeClassName={headerStyles.activeNavItem}
-              to="/contact"
-            >
-              Contact
-            </Link>
+            <ul className="lg:flex lg:flex-row">
+              <li>
+                <Link
+                  className="block mt-4 lg:inline-block lg:mt-0 hover:text-teal-200 mr-4"
+                  activeClassName={headerStyles.activeNavItem}
+                  to="/"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link
+                  className="block mt-4 lg:inline-block lg:mt-0 hover:text-teal-200 mr-4"
+                  activeClassName={headerStyles.activeNavItem}
+                  to="/blog"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link
+                  className="block mt-4 lg:inline-block lg:mt-0 hover:text-teal-200 mr-4"
+                  activeClassName={headerStyles.activeNavItem}
+                  to="/about"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link
+                  className="block mt-4 lg:inline-block lg:mt-0 hover:text-teal-200 mr-4"
+                  activeClassName={headerStyles.activeNavItem}
+                  to="/contact"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <DarkModeToggle />
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
+      <div className="flex justify-end"></div>
     </header>
   )
 }

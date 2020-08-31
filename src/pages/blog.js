@@ -6,22 +6,22 @@ import Head from "../components/Head"
 
 const BlogPage = () => {
   // const data = useStaticQuery(graphql`
-  //   query {
-  //     allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
-  //       edges {
-  //         node {
-  //           title
-  //           slug
-  //           publishedDate(formatString: "DD MMMM, YYYY")
-  //           thumbnail {
-  //             resize {
-  //               src
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
+    // query {
+    //   allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+    //     edges {
+    //       node {
+    //         title
+    //         slug
+    //         publishedDate(formatString: "DD MMMM, YYYY")
+    //         thumbnail {
+    //           resize {
+    //             src
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   // `)
   //query will be needed later
 
