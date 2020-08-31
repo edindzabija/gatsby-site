@@ -24,9 +24,7 @@ const IndexPage = () => {
       }
     }
   `)
-  const btnFunc = () => {
-    alert("Work in Progress")
-  }
+
   return (
     <div>
       <Layout>

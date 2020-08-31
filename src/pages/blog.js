@@ -37,10 +37,7 @@ const BlogPage = () => {
           <div className="grid gap-2 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 m-5 mb-10">
             {data.allContentfulBlogPost.edges.map(post => {
               return (
-                <div
-                  key={post.node.slug}
-                  className="w-full single-post"
-                >
+                <div key={post.node.slug} className="w-full single-post">
                   <img
                     src={post.node.thumbnail.resize.src}
                     className="object-cover h-64 lg:h-48 w-full "
@@ -48,11 +45,11 @@ const BlogPage = () => {
                   />
 
                   <div className="lg:p-2">
-                    <h2 className="font-bold text-2xl ">
-                      {post.node.title}
-                    </h2>
+                    <h2 className="font-bold text-2xl ">{post.node.title}</h2>
                     <p className=" mt-2">
-                    {post.node.postDescription ? post.node.postDescription.slice(0,150)+'...' : ''}
+                      {post.node.postDescription
+                        ? post.node.postDescription.slice(0, 150) + "..."
+                        : ""}
                     </p>
 
                     <Link

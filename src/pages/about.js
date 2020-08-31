@@ -10,12 +10,12 @@ const About = () => {
       <div className="mt-12 m-auto">
         <h1>About</h1>
         <p>
-          Page built with:
+          Built with:
           <ul>
             <li>Gatsby</li>
             <li>React</li>
             <li>GraphQL</li>
-            <li>Netlify</li>
+            <li>Deployed on: Netlify</li>
           </ul>
         </p>
       </div>
