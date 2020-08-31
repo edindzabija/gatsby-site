@@ -35,20 +35,21 @@ const IndexPage = () => {
             {/* <!-- main post --> */}
             <div className="mb-4 lg:mb-0 p-4 lg:p-2 lg:pl-0 w-full md:w-4/7 relative block">
               <img
-                src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png" alt="placeholder"
+                src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png"
+                alt="placeholder"
                 className="-md object-cover w-full h-64"
               />
-              <span className="text-green-700 text-sm hidden md:block mt-4">
+              <span className="text-sm hidden md:block mt-4">
                 {" "}
                 React {" - "}
                 Gatsby {" - "}
                 GraphQL {" - "}
                 CMS{" "}
               </span>
-              <h1 className="text-gray-800 text-4xl font-bold mt-2 mb-2 leading-tight">
+              <h1 className=" text-4xl font-bold mt-2 mb-2 leading-tight">
                 How to make your personal blog with React and Gatsby.js [Part 1]
               </h1>
-              <p className="text-gray-600 mb-4">
+              <p className=" mb-4">
                 In this series of posts we will go trough the whole process of
                 creating a personal blog with React and Gatsby.js You will learn
                 everything from setting up the project to deploying it on the
@@ -56,7 +57,7 @@ const IndexPage = () => {
               </p>
               <button
                 onClick={btnFunc}
-                className="focus:outline-none inline-block px-6 py-3 mt-2 -md bg-green-700 text-gray-100 "
+                className="focus:outline-none inline-block px-6 py-3 mt-2 -md rounded-md bg-green-700 text-gray-100 "
               >
                 Read More
               </button>
@@ -74,12 +75,12 @@ const IndexPage = () => {
                           src={post.node.thumbnail.resize.src}
                           alt={post.node.slug}
                         />
-                        <div className="w-full md:w-2/3 px-4 pb-4 bg-white">
-                          <div className="rounded bg-red-100 mb-1">
+                        <div className="w-full md:w-2/3 px-4 pb-4 ">
+                          <div className="rounded mb-1">
                             Category
                           </div>
                           <div className="flex items-center">
-                            <h3 className="text-xl text-gray-800 font-medium mr-auto">
+                            <h3 className="text-xl font-medium mr-auto">
                               {post.node.title.length > 50
                                 ? post.node.title.slice(0, 50) + "..."
                                 : post.node.title}
@@ -96,10 +97,8 @@ const IndexPage = () => {
           </div>
           {/* recent with dummy text - todo map news*/}
           <div className="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
-            <h2 className="font-bold text-3xl">Latest news</h2>
-            <Link className="bg-gray-200 hover:bg-green-200 text-gray-800 px-3 py-1  cursor-pointer">
-              View all
-            </Link>
+            <h2 className="font-bold text-3xl">Latest posts</h2>
+            
           </div>
           <div className="block space-x-0 lg:flex lg:space-x-6">
             <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
@@ -109,10 +108,10 @@ const IndexPage = () => {
                 alt="technology"
               />
               <div className="p-4 pl-0">
-                <h2 className="font-bold text-2xl text-gray-800">
+                <h2 className="font-bold text-2xl ">
                   Put all speaking her delicate recurred possible.
                 </h2>
-                <p className="text-gray-700 mt-2">
+                <p className="mt-2">
                   Set indulgence inquietude discretion insensible bed why
                   announcing. Middleton fat two satisfied additions. So
                   continued he or commanded household smallness delivered. Door
@@ -136,10 +135,10 @@ const IndexPage = () => {
                 alt="technology"
               />
               <div className="p-4 pl-0">
-                <h2 className="font-bold text-2xl text-gray-800">
+                <h2 className="font-bold text-2xl ">
                   Is at purse tried jokes china ready decay an.{" "}
                 </h2>
-                <p className="text-gray-700 mt-2">
+                <p className=" mt-2">
                   Small its shy way had woody downs power. To denoting admitted
                   speaking learning my exercise so in. Procured shutters mr it
                   feelings. To or three offer house begin taken am at.
@@ -162,11 +161,11 @@ const IndexPage = () => {
                 alt="technology"
               />
               <div className="p-4 pl-0">
-                <h2 className="font-bold text-2xl text-gray-800">
+                <h2 className="font-bold text-2xl ">
                   As dissuade cheerful overcame so of friendly he indulged
                   unpacked.
                 </h2>
-                <p className="text-gray-700 mt-2">
+                <p className=" mt-2">
                   Alteration connection to so as collecting me. Difficult in
                   delivered extensive at direction allowance. Alteration put use
                   diminution can considered sentiments interested discretion.
