@@ -2,9 +2,9 @@
 
 ### Work In Progress
 
-## TODO:
-### [X] Header/Navigation
-### [X] Display posts list
-### [X] Create new post pages, display posts
-### [X] CMS
-### [ ] Styles
+## You can see check the live version [here](https://another-gatsby-blog.netlify.app/blog)
+
+### IMPORTANT
+
+### This is a work in progress! 
+### The site is built purely for educational purposes.
