@@ -15,6 +15,7 @@ const About = () => {
             <li>Gatsby</li>
             <li>React</li>
             <li>GraphQL</li>
+            <li>Tailwind CSS</li>
             <li>Deployed on: Netlify</li>
           </ul>
         </p>
