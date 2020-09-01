@@ -1,6 +1,6 @@
 ## Gatsby Blog
 
-## You can see check the live version [here](https://another-gatsby-blog.netlify.app/blog)
+## You can see check the live version [here](https://another-gatsby-blog.netlify.app)
 
 ### IMPORTANT
 
