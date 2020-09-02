@@ -39,7 +39,6 @@ const Blog = props => {
           options
         )}
       </main>
-      <div>lil</div>
     </Layout>
   )
 }

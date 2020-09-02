@@ -21,6 +21,9 @@ p {
   @apply py-2;
   @apply text-lg;
 }
+a{
+  @apply text-base
+}
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -39,6 +42,9 @@ body.light-mode {
   .footer {
     @apply bg-teal-100;
   }
+  .read-more{
+    @apply text-green-900
+  }
 }
 
 body.dark-mode {
@@ -56,6 +62,9 @@ body.dark-mode {
   }
   .single-post {
     background-color: #161f27;
+  }
+  .read-more{
+    @apply text-green-400
   }
   label {
     @apply text-white;

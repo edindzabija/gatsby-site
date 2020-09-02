@@ -30,6 +30,7 @@ const IndexPage = () => {
       <Layout>
         <Head title="Home" />
         <main className="mt-12">
+          {/* part 1 */}
           <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6 mb-16">
             {/* <!-- main post --> */}
             <div className="mb-4 lg:mb-0 p-4 lg:p-2 lg:pl-0 w-full md:w-4/7 relative block">
@@ -75,7 +76,9 @@ const IndexPage = () => {
                           alt={post.node.slug}
                         />
                         <div className="w-full md:w-2/3 px-4 pb-4 ">
-                          <div className="rounded mb-1">{post.node.publishedDate}</div>
+                          <div className="rounded mb-1">
+                            {post.node.publishedDate}
+                          </div>
                           <div className="flex items-center">
                             <h3 className="text-xl font-medium mr-auto">
                               {post.node.title.length > 50
@@ -92,13 +95,12 @@ const IndexPage = () => {
               })}
             </div>
           </div>
-          {/* latest posts */}
-
+          {/* part 1 */}
           <div className="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
             <h2 className="font-bold text-3xl">Latest posts</h2>
           </div>
           <div className="block space-x-0 lg:flex lg:space-x-6">
-            {data.allContentfulBlogPost.edges.slice(0, 3).map(post => {
+            {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
               return (
                 <div
                   key={post.node.slug + "-latest"}
@@ -120,7 +122,7 @@ const IndexPage = () => {
 
                     <Link
                       to={`/blog/${post.node.slug}`}
-                      className="inline-block py-2  text-green-900 mt-2 ml-auto"
+                      className="read-more inline-block py-2 mt-2 ml-auto"
                     >
                       {" "}
                       Read more{" "}
