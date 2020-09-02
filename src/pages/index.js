@@ -75,7 +75,7 @@ const IndexPage = () => {
                           alt={post.node.slug}
                         />
                         <div className="w-full md:w-2/3 px-4 pb-4 ">
-                          <div className="rounded mb-1">Category</div>
+                          <div className="rounded mb-1">{post.node.publishedDate}</div>
                           <div className="flex items-center">
                             <h3 className="text-xl font-medium mr-auto">
                               {post.node.title.length > 50
@@ -98,85 +98,37 @@ const IndexPage = () => {
             <h2 className="font-bold text-3xl">Latest posts</h2>
           </div>
           <div className="block space-x-0 lg:flex lg:space-x-6">
-            <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
-              <img
-                src="https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
-                className=""
-                alt="technology"
-              />
-              <div className="p-4 pl-0">
-                <h2 className="font-bold text-2xl ">
-                  Put all speaking her delicate recurred possible.
-                </h2>
-                <p className="mt-2">
-                  Set indulgence inquietude discretion insensible bed why
-                  announcing. Middleton fat two satisfied additions. So
-                  continued he or commanded household smallness delivered. Door
-                  poor on do walk in half. Roof his head the what.
-                </p>
-
-                <Link
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
+            {data.allContentfulBlogPost.edges.slice(0, 3).map(post => {
+              return (
+                <div
+                  key={post.node.slug + "-latest"}
+                  className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0"
                 >
-                  {" "}
-                  Read more{" "}
-                </Link>
-              </div>
-            </div>
+                  <img
+                    src={post.node.thumbnail.resize.src}
+                    alt={post.node.slug}
+                    className="h-48 w-full"
+                  />
 
-            <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
-              <img
-                src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
-                className=""
-                alt="technology"
-              />
-              <div className="p-4 pl-0">
-                <h2 className="font-bold text-2xl ">
-                  Is at purse tried jokes china ready decay an.{" "}
-                </h2>
-                <p className=" mt-2">
-                  Small its shy way had woody downs power. To denoting admitted
-                  speaking learning my exercise so in. Procured shutters mr it
-                  feelings. To or three offer house begin taken am at.
-                </p>
+                  <div className="p-4 pl-0">
+                    <h2 className="font-bold text-2xl ">
+                      {post.node.title.length > 55
+                        ? post.node.title.slice(0, 55) + "..."
+                        : post.node.title}
+                    </h2>
+                    <p className="mt-2">{post.node.postDescription}</p>
 
-                <Link
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
-                >
-                  {" "}
-                  Read more{" "}
-                </Link>
-              </div>
-            </div>
-
-            <div className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
-              <img
-                src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-                className=""
-                alt="technology"
-              />
-              <div className="p-4 pl-0">
-                <h2 className="font-bold text-2xl ">
-                  As dissuade cheerful overcame so of friendly he indulged
-                  unpacked.
-                </h2>
-                <p className=" mt-2">
-                  Alteration connection to so as collecting me. Difficult in
-                  delivered extensive at direction allowance. Alteration put use
-                  diminution can considered sentiments interested discretion.
-                </p>
-
-                <Link
-                  href="#"
-                  className="inline-block py-2  text-green-900 mt-2 ml-auto"
-                >
-                  {" "}
-                  Read more{" "}
-                </Link>
-              </div>
-            </div>
+                    <Link
+                      to={`/blog/${post.node.slug}`}
+                      className="inline-block py-2  text-green-900 mt-2 ml-auto"
+                    >
+                      {" "}
+                      Read more{" "}
+                    </Link>
+                  </div>
+                </div>
+              )
+            })}
           </div>
           {/* recent with dummy text end */}
         </main>
