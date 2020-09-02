@@ -1,5 +1,4 @@
 import React from "react"
-import Particles from "react-particles-js"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
