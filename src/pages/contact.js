@@ -58,7 +58,7 @@ const Contact = () => {
               <p>
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="first-name"
+                  htmlFor="first-name"
                 >
                   Your name:
                   <br />
@@ -77,7 +77,7 @@ const Contact = () => {
             <p>
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="email"
+                htmlFor="email"
               >
                 Your email:
                 <br />
@@ -96,7 +96,7 @@ const Contact = () => {
               <div className="w-full px-3">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-password"
+                  htmlFor="grid-password"
                 >
                   Message
                 </label>

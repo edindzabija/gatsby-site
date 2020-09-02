@@ -38,15 +38,16 @@ const BlogPage = () => {
             {data.allContentfulBlogPost.edges.map(post => {
               return (
                 <div key={post.node.slug} className="w-full single-post">
-                  <img
-                    src={post.node.thumbnail.resize.src}
-                    className="object-cover h-64 lg:h-48 w-full "
-                    alt="technology"
-                  />
-
+                  <Link to={`/blog/${post.node.slug}`}>
+                    <img
+                      src={post.node.thumbnail.resize.src}
+                      className="object-cover h-64 lg:h-48 w-full  "
+                      alt="technology"
+                    />
+                  </Link>
                   <div className="lg:p-2">
                     <h2 className="font-bold text-2xl ">{post.node.title}</h2>
-                    <p className=" mt-2">
+                    <p className="mt-2">
                       {post.node.postDescription
                         ? post.node.postDescription.slice(0, 150) + "..."
                         : ""}

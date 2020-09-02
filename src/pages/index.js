@@ -24,7 +24,7 @@ const IndexPage = () => {
       }
     }
   `)
-
+  console.log(data.allContentfulBlogPost.edges[0].node.thumbnail.fluid.src)
   return (
     <div>
       <Layout>
@@ -35,9 +35,10 @@ const IndexPage = () => {
             {/* <!-- main post --> */}
             <div className="mb-4 lg:mb-0 p-4 lg:p-2 lg:pl-0 w-full md:w-4/7 relative block">
               <img
-                src="https://miro.medium.com/max/3000/1*qEKwznoakcHszhcDfcFhzQ.png"
-                alt="placeholder"
-                className="-md object-fill w-full h-64"
+                src={
+                  data.allContentfulBlogPost.edges[0].node.thumbnail.fluid.src
+                }
+                alt="top-post-image"
               />
               <span className="text-sm hidden md:block mt-4">
                 {" "}
@@ -67,11 +68,11 @@ const IndexPage = () => {
             <div className="w-full md:w-4/7">
               {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
                 return (
-                  <div key={post.node.slug}>
+                  <div className="p-4 lg:p-2" key={post.node.slug}>
                     <Link to={`/blog/${post.node.slug}`}>
                       <div className="top-post p-2 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
                         <img
-                          className="h-full w-2/5 lg:w-1/3 object-cover pb-5/6"
+                          className="lg:block w-2/5 lg:w-1/3 pb-5/6"
                           src={post.node.thumbnail.fluid.src}
                           alt={post.node.slug}
                         />
@@ -104,14 +105,15 @@ const IndexPage = () => {
               return (
                 <div
                   key={post.node.slug + "-latest"}
-                  className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0"
+                  className=" w-full lg:w-1/3 p-4 lg:p-0"
                 >
-                  <img
-                    src={post.node.thumbnail.fluid.src}
-                    alt={post.node.slug}
-                    className="h-auto lg:h-48 lg:w-full"
-                  />
-
+                  <Link to={`/blog/${post.node.slug}`}>
+                    <img
+                      src={post.node.thumbnail.fluid.src}
+                      alt={post.node.slug}
+                      className="h-auto lg:h-48 w-full"
+                    />
+                  </Link>
                   <div className="p-4 pl-0">
                     <h2 className="font-bold text-2xl ">
                       {post.node.title.length > 55
