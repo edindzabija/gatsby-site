@@ -36,7 +36,7 @@ const IndexPage = () => {
             <div className="mb-4 lg:mb-0 p-4 lg:p-2 lg:pl-0 w-full md:w-4/7 relative block">
               <img
                 src={
-                  data.allContentfulBlogPost.edges[0].node.thumbnail.fluid.src
+                  data.allContentfulBlogPost.edges[1].node.thumbnail.fluid.src
                 }
                 alt="top-post-image"
               />
