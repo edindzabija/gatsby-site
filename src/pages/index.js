@@ -15,7 +15,7 @@ const IndexPage = () => {
             slug
             publishedDate(formatString: "DD MMMM, YYYY")
             thumbnail {
-              resize {
+              fluid {
                 src
               }
             }
@@ -71,7 +71,7 @@ const IndexPage = () => {
                       <div className="top-post p-2 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
                         <img
                           className="h-full w-2/5 lg:w-1/3 object-cover pb-5/6"
-                          src={post.node.thumbnail.resize.src}
+                          src={post.node.thumbnail.fluid.src}
                           alt={post.node.slug}
                         />
                         <div className="w-full md:w-2/3 px-4 pb-4 ">
@@ -105,9 +105,9 @@ const IndexPage = () => {
                   className=" w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0"
                 >
                   <img
-                    src={post.node.thumbnail.resize.src}
+                    src={post.node.thumbnail.fluid.src}
                     alt={post.node.slug}
-                    className="h-48 w-full"
+                    className="h-auto lg:h-48 lg:w-full"
                   />
 
                   <div className="p-4 pl-0">

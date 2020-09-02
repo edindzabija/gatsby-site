@@ -9,7 +9,7 @@ const About = () => {
       <Head title="About" />
       <div className="mt-12 m-auto">
         <h1>About</h1>
-        <p>
+        
           Built with:
           <ul>
             <li>Gatsby</li>
@@ -18,7 +18,7 @@ const About = () => {
             <li>Tailwind CSS</li>
             <li>Deployed on: Netlify</li>
           </ul>
-        </p>
+        
       </div>
     </Layout>
   )
