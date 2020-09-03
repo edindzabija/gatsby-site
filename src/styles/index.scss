@@ -42,30 +42,30 @@ body.light-mode {
   .footer {
     @apply bg-teal-100;
   }
-  .read-more{
-    @apply text-green-900
-  }
+  // .read-more{
+  //   @apply text-green-900
+  // }
 }
 
 body.dark-mode {
-  background-color: #10171d;
+  background-color: #181818;
   color: #dfdfdf;
 
   .header {
-    background-color: #1b2938;
+    background-color: #202020;
   }
   .footer {
-    @apply bg-teal-900;
+    background-color: #202020;;
   }
-  .top-post {
-    background-color: #161f27;
-  }
-  .single-post {
-    background-color: #161f27;
-  }
-  .read-more{
-    @apply text-green-400
-  }
+  // .top-post {
+  //   background-color: #161f27;
+  // }
+  // .single-post {
+  //   background-color: #161f27;
+  // }
+  // .read-more{
+  //   @apply text-green-400
+  // }
   label {
     @apply text-white;
   }

@@ -31,7 +31,7 @@ const IndexPage = () => {
         <Head title="Home" />
         <main className="mt-12">
           {/* part 1 */}
-          <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6 mb-16">
+          <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6">
             {/* <!-- main post --> */}
             <div className="mb-4 lg:mb-0 p-4 lg:p-2 lg:pl-0 w-full md:w-4/7 relative block">
               <img
@@ -58,7 +58,7 @@ const IndexPage = () => {
               </p>
               <Link
                 to={`/blog/how-to-make-your-personal-blog-with-react-and-gatsby-js-part-1`}
-                className="focus:outline-none inline-block px-6 py-3 mt-2 -md rounded-md bg-green-700 text-gray-100 "
+                className="w-screen shadow bg-teal-900 hover:bg-teal-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
               >
                 Read More
               </Link>
@@ -68,9 +68,9 @@ const IndexPage = () => {
             <div className="w-full md:w-4/7">
               {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
                 return (
-                  <div className="p-4 lg:p-2" key={post.node.slug}>
+                  <div className="p-4 lg:p-2 lg:pt-0" key={post.node.slug}>
                     <Link to={`/blog/${post.node.slug}`}>
-                      <div className="top-post p-2 flex shadow-sm mx-auto mb-30 mb-2 max-w-lg md:max-w-2xl h-40">
+                      <div className="top-post py-2 flex shadow-sm mx-auto max-w-lg md:max-w-2xl h-40">
                         <img
                           className="lg:block w-2/5 lg:w-1/3 pb-5/6"
                           src={post.node.thumbnail.fluid.src}
@@ -97,21 +97,22 @@ const IndexPage = () => {
             </div>
           </div>
           {/* part 1 */}
-          <div className="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
+
+          <div className="flex mt-4 mb-4 px-4 lg:px-0 items-center justify-between">
             <h2 className="font-bold text-3xl">Latest posts</h2>
           </div>
-          <div className="block space-x-0 lg:flex lg:space-x-6">
+          <div className="grid gap-2 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 px-1">
             {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
               return (
                 <div
                   key={post.node.slug + "-latest"}
-                  className=" w-full lg:w-1/3 p-4 lg:p-0"
+                  className="w-full"
                 >
                   <Link to={`/blog/${post.node.slug}`}>
                     <img
                       src={post.node.thumbnail.fluid.src}
                       alt={post.node.slug}
-                      className="h-auto lg:h-48 w-full"
+                      className="h-auto md:h-56 lg:h-48 w-full"
                     />
                   </Link>
                   <div className="p-4 pl-0">
@@ -120,14 +121,16 @@ const IndexPage = () => {
                         ? post.node.title.slice(0, 55) + "..."
                         : post.node.title}
                     </h2>
-                    <p className="mt-2">{post.node.postDescription}</p>
+                    <p className="mt-2">{post.node.postDescription
+                          ? post.node.postDescription.slice(0, 120) + "..."
+                          : ""}</p>
 
                     <Link
                       to={`/blog/${post.node.slug}`}
                       className="read-more inline-block py-2 mt-2 ml-auto"
                     >
                       {" "}
-                      Read more{" "}
+                      Read more ▶
                     </Link>
                   </div>
                 </div>
