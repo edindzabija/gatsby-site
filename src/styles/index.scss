@@ -21,8 +21,8 @@ p {
   @apply py-2;
   @apply text-lg;
 }
-a{
-  @apply text-base
+a {
+  @apply text-base;
 }
 body::-webkit-scrollbar {
   width: 0.5rem;
@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
 
-//  dark mode
+//  dark mode styles // could refactor tailwind classes into it if not lazy
 body.light-mode {
   background-color: #fff;
   color: #333;
@@ -42,9 +42,6 @@ body.light-mode {
   .footer {
     @apply bg-teal-100;
   }
-  // .read-more{
-  //   @apply text-green-900
-  // }
 }
 
 body.dark-mode {
@@ -55,17 +52,9 @@ body.dark-mode {
     background-color: #202020;
   }
   .footer {
-    background-color: #202020;;
+    background-color: #202020;
   }
-  // .top-post {
-  //   background-color: #161f27;
-  // }
-  // .single-post {
-  //   background-color: #161f27;
-  // }
-  // .read-more{
-  //   @apply text-green-400
-  // }
+
   label {
     @apply text-white;
   }
@@ -139,5 +128,4 @@ input[type="checkbox"].dmcheck {
     background-color: #f6f6f6;
   }
 }
-
 //  dark mode

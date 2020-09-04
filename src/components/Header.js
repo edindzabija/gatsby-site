@@ -1,18 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import headerStyles from "./header.module.scss"
 import DarkModeToggle from "../components/DarkModeToggle"
 const Header = () => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
   const [isOpen, setIsOpen] = useState(false)
 
   const mobileMenuHandler = () => {
@@ -62,8 +52,8 @@ const Header = () => {
             <ul className="lg:flex lg:flex-row">
               <li>
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-200 mr-4"
-                  activeClassName={headerStyles.activeNavItem}
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
+                  activeClassName="text-teal-600"
                   to="/"
                 >
                   Home
@@ -72,8 +62,8 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-200 mr-4"
-                  activeClassName={headerStyles.activeNavItem}
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
+                  activeClassName="text-teal-600"
                   to="/blog"
                 >
                   Blog
@@ -82,8 +72,8 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-200 mr-4"
-                  activeClassName={headerStyles.activeNavItem}
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
+                  activeClassName="text-teal-600"
                   to="/about"
                 >
                   About
@@ -92,8 +82,8 @@ const Header = () => {
               <li>
                 {" "}
                 <Link
-                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-200 mr-4"
-                  activeClassName={headerStyles.activeNavItem}
+                  className="font-medium block mt-4 lg:inline-block lg:mt-0 hover:text-teal-400 mr-4"
+                  activeClassName="text-teal-600"
                   to="/contact"
                 >
                   Contact

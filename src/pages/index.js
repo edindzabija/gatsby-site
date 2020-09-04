@@ -96,18 +96,13 @@ const IndexPage = () => {
               })}
             </div>
           </div>
-          {/* part 1 */}
-
           <div className="flex mt-4 mb-4 px-4 lg:px-0 items-center justify-between">
             <h2 className="font-bold text-3xl">Latest posts</h2>
           </div>
           <div className="grid gap-2 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 px-1">
             {data.allContentfulBlogPost.edges.slice(0, 4).map(post => {
               return (
-                <div
-                  key={post.node.slug + "-latest"}
-                  className="w-full"
-                >
+                <div key={post.node.slug + "-latest"} className="w-full">
                   <Link to={`/blog/${post.node.slug}`}>
                     <img
                       src={post.node.thumbnail.fluid.src}
@@ -121,9 +116,11 @@ const IndexPage = () => {
                         ? post.node.title.slice(0, 55) + "..."
                         : post.node.title}
                     </h2>
-                    <p className="mt-2">{post.node.postDescription
-                          ? post.node.postDescription.slice(0, 120) + "..."
-                          : ""}</p>
+                    <p className="mt-2">
+                      {post.node.postDescription
+                        ? post.node.postDescription.slice(0, 120) + "..."
+                        : ""}
+                    </p>
 
                     <Link
                       to={`/blog/${post.node.slug}`}
@@ -137,7 +134,6 @@ const IndexPage = () => {
               )
             })}
           </div>
-          {/* recent with dummy text end */}
         </main>
       </Layout>
     </div>
