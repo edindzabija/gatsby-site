@@ -21,7 +21,7 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-use-dark-mode',
+    "gatsby-plugin-use-dark-mode",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",

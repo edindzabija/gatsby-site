@@ -4,5 +4,6 @@
 
 ### IMPORTANT
 
-### This is a work in progress! 
+### This is a work in progress!
+
 ### The site is built purely for educational purposes.
